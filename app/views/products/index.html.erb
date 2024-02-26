@@ -1,8 +1,9 @@
 <h1>Products</h1>
 
+<!-- index.html.erb -->
 <ul>
   <% @products.each do |product| %>
-    <li><%= link_to product.title, product %></li>
+    <li><%= link_to "#{product.title} (#{product.category.name})", product %></li>
   <% end %>
 </ul>
 
