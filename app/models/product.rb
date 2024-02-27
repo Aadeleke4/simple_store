@@ -1,4 +1,3 @@
-class Product < ApplicationRecord    
-    validates :title, :price, :stock_quantity, presence: true
-end
-
+class Product < ApplicationRecord
+    belongs_to :category
+  end  

@@ -16,3 +16,4 @@ csv.each do |row|
   category = Category.find_or_create_by(name: category_name)
   Product.create(title: row['title'], description: row['description'], price: row['price'], stock_quantity: row['stock_quantity'], category: category)
 end
+
