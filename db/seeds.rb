@@ -14,6 +14,6 @@ csv = CSV.parse(csv_text, headers: true, encoding: 'UTF-8')
 csv.each do |row|
   category_name = row['category']
   category = Category.find_or_create_by(name: category_name)
-  Product.create(title: row['title'], description: row['description'], price: row['price'], stock_quantity: row['stock_quantity'], category: category)
+  Product.create(title: row['name'], description: row['description'], price: row['price'],stock_quantity: row['stock quantity'], category: category)
 end
 
